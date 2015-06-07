@@ -6,8 +6,6 @@
   },
   "dependencies": {
     "body-parser": "~1.4.2",
-    "datadog-metrics": "^0.2.1",
-    "dogapi": "^1.0.2",
     "express": "~4.5.1",
     "method-override": "~2.0.2",
     "mongoose": "~3.8.0",
