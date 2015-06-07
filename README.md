@@ -33,6 +33,7 @@ Frontend = public { AngularJS }
 Project Setup
 https://scotch.io/tutorials/setting-up-a-mean-stack-single-page-application
 http://meanjs.org/docs.html#folder-structure
+https://scotch.io/tutorials/using-gruntjs-in-a-mean-stack-application
 
 RESTful API for Journal entries + User Authentication
 https://thinkster.io/mean-stack-tutorial/
