@@ -1,10 +1,13 @@
-$(function() {
-	$.scrollify({
-			section : "section",
-			sectionName: "class",
-			easing: "easeOutExpo",
-			scrollSpeed: 1200,
-			offset : 0,
-			scrollbars: false
+$(document).ready(function() {
+	$('#fullpage').fullpage({
+
+		//Scrolling
+		css3: true,
+		scrollingSpeed: 700,
+		fitToSection: true,
+		scrollBar: false,
+		easing: 'easeInOutCubic',
+
+
 	});
 });

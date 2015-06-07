@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Luisanny App</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="libs/fullpage/jquery.fullPage.css" >
     <link rel="stylesheet" type="text/css" href="css/universal.css">
     
 
@@ -13,24 +14,15 @@
 <body ng-app="gruntApp" ng-controller="mainController">
 
     <main>
-        <div class="panel-container">
-
-            <div id="panels">
-                <section id="panel-1" class="panel">
-                    Nunc imperdiet tincidunt bibendum. Donec neque purus, fermentum tempor dolor eget, sodales auctor dolor. 
-                </section>
-                <section id="panel-2" class="panel">
-                    Nunc imperdiet tincidunt bibendum. Donec neque purus, fermentum tempor dolor eget, sodales auctor dolor. 
-                </section>
-                <section id="panel-3" class="panel">
-                    Nunc imperdiet tincidunt bibendum. Donec neque purus, fermentum tempor dolor eget, sodales auctor dolor. 
-                </section>
-                <section id="panel-4" class="panel">
-                    Nunc imperdiet tincidunt bibendum. Donec neque purus, fermentum tempor dolor eget, sodales auctor dolor. 
-                </section>
-                <section id="panel-5" class="panel">
-                    Nunc imperdiet tincidunt bibendum. Donec neque purus, fermentum tempor dolor eget, sodales auctor dolor. 
-                </section>
+        <div class="container">
+            <a id="previous-slide" class="icon-arrow-up-white"></a>
+            <a id="next-slide" class="icon-arrow-down-white"></a>
+            <div id="fullpage">
+                <div id="" class="section panel-1">1</div>
+                <div id="" class="section panel-2">2</div>
+                <div id="" class="section panel-3">3</div>
+                <div id="" class="section panel-4">4</div>
+                <div id="" class="section panel-5">5</div>
             </div>    
         </div>    
     </main>
@@ -43,9 +35,11 @@
 
 
     <script src="http://localhost:35729/livereload.js"></script>
+
     <script src="libs/jquery/dist/jquery.min.js"></script>
-    <script src="libs/jquery.easing/js/jquery.easing.min.js"></script>
-    <script src="libs/Scrollify/jquery.scrollify.min.js"></script>
+    <script src="libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="libs/fullpage/jquery.fullPage.min.js"></script>
+
     <script src="libs/angular/angular.min.js"></script>
     <script src="js/controllers/MainCtrl.js"></script>
     <script src="js/services/TestService.js"></script>
