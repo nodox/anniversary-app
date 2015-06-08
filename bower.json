@@ -8,7 +8,7 @@
     "font-awesome": "latest",
     "animate.css": "latest",
     "angular": "latest",
-    "angular-route": "latest",
+    "angular-route": "~1.4.0",
     "fullpage": "~2.6.5",
     "jquery-ui": "~1.11.4"
   }

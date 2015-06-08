@@ -59,3 +59,6 @@ http://projects.lukehaas.me/scrollify/#home
 http://www.pushhere.com
 fullpage.js
 http://ninodezign.com/30-jquery-plugins-for-scrolling-effects-with-css-animation/
+
+Off Screen Navigation
+http://www.sitepoint.com/pure-css-off-screen-navigation-menu/

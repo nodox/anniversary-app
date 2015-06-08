@@ -1,4 +1,4 @@
-// app/routes.js
+/*// app/routes.js
 
 // grab the Data model we just created
 var Data = require('./models/data');
@@ -35,4 +35,4 @@ var Data = require('./models/data');
             res.sendfile('./public/index.html'); // load our public/index.html file
         });
 
-    };
+    };*/
