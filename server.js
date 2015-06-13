@@ -64,7 +64,7 @@ var mailOptions = {
 */
 //mongoose.connect('mongodb://localhost/DATABASE_NAME'); 
 mongoose.connect('mongodb://sn:lp@novus.modulusmongo.net:27017/gyQ4unot'); 
-var Post = require('./app-backend/models/post');
+var Post = require('./app/models/post');
 
 
 

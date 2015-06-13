@@ -1,12 +1,12 @@
 
-var app = angular.module('anniversaryApp', ['ngRoute']);
+var app = angular.module('appRoutes', ['ngRoute']);
 
 app
 	.config(function($routeProvider){
 		$routeProvider
 			.when('/remember', {
 				templateUrl : 'views/remember.html',
-				controller  : ''
+				controller  : 'RememberController'
 			})
 			.when('/record', {
 				templateUrl : 'views/record.html',

@@ -1,0 +1,1 @@
+angular.module('anniversaryApp', ['ngRoute', 'appRoutes', 'RememberModule']);
