@@ -24,7 +24,9 @@ angular.module('RecordModule').factory('PostService', ['$http',
 		};
 
 		PostObj.delete = function(postId){
-			/*return $http.delete('/api/posts/' + postId)*/
+			return $http.delete('/api/posts/' + postId).success(function(data) {
+				PostObj.posts.push(data);
+			});
 		};
 
 		PostObj.update = function(postId){
