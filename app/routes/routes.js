@@ -1,8 +1,5 @@
 // app/routes.js
 
-// grab the Data model we just created
-
-
 
 var express = require('express');
 var router = express.Router();       // get an instance of the express Router

@@ -1,1 +1,1 @@
-angular.module('anniversaryApp', ['appRoutes', 'RememberModule']);
+angular.module('anniversaryApp', ['appRoutes', 'RememberModule', 'RecordModule', 'ReconnectModule']);

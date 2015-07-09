@@ -11,7 +11,7 @@ var app			   = express();
 var bodyParser	   = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose       = require('mongoose');
-var apiEndpoints     = require('./app/routes/routes')(app);
+var apiEndpoints   = require('./app/routes/routes')(app);
 
 
 
@@ -78,10 +78,6 @@ app.use(bodyParser.json());
 
 // set our port
 var port = process.env.PORT || 8080; 
-
-
-
-
 
 
 

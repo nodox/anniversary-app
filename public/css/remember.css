@@ -1,0 +1,66 @@
+nav {
+	position: fixed;
+	z-index: 998;
+	width: 0;
+}
+
+a[data-activates="slide-out"] {
+	left: 10px;
+}
+
+/* ===============================
+
+================================== */
+
+
+.mdi-content-add {
+	font-size: 76px;
+	font-weight: 800;
+	color: rgba(0,0,0, 0.6); 
+}
+
+.panel-1, 
+.panel-2, 
+.panel-3 {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+.panel-1 {
+	background-image: url("../../assets/img/couples.jpg");
+}
+
+.panel-2 {
+	background-image: url("../../assets/img/wedding_area.jpg");
+}
+
+.panel-3 {
+	background-image: url("../../assets/img/just_married.jpg");
+}
+
+
+
+
+
+
+
+/* ==========================================
+
+Mobile Screen Breakpoints
+
+============================================= */
+
+@media screen and (min-width : 768px) {      /*  Small Devices  - smart phones */
+
+}
+
+@media screen and (min-width : 992px) {      /*  Medium Devices - desktops  */
+
+}
+
+@media screen and (min-width : 1200px) {      /*  Large displays  */
+
+}
+

@@ -10,11 +10,11 @@ app
 			})
 			.when('/record', {
 				templateUrl : 'views/record.html',
-				controller  : ''
+				controller  : 'RecordController'
 			})
 			.when('/reconnect', {
 				templateUrl : 'views/reconnect.html',
-				controller  : ''
+				controller  : 'ReconnectController'
 			})
 			.otherwise({
 				redirectTo  : '/remember'

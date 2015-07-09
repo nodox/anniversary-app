@@ -1,4 +1,4 @@
-/*angular.module('RecordCtrl', [])
-    .controller('RecordController', ['$scope', '$http', function($scope, $http){
-
-    }]);*/
+angular.module('RecordModule', [])
+  .controller('RecordController', ['$scope', '$http', function($scope, $http){
+		$scope.test = 'runner';
+  }]);
