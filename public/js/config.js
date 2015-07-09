@@ -10,7 +10,14 @@ app
 			})
 			.when('/record', {
 				templateUrl : 'views/record.html',
-				controller  : 'RecordController'
+				controller  : 'RecordController',
+				
+				// using resolve property: when view entered, query all posts from our backend 
+				resolve: {
+					postPromise: ['PostService', function(PostService) {
+						return PostService.getAll();
+					}]
+				}
 			})
 			.when('/reconnect', {
 				templateUrl : 'views/reconnect.html',
