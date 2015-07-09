@@ -25,7 +25,7 @@ a[data-activates="slide-out"] {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
-	background-size: cover;
+	background-size: 900px 100%;
 }
 
 .panel-1 {
@@ -53,6 +53,11 @@ Mobile Screen Breakpoints
 ============================================= */
 
 @media screen and (min-width : 768px) {      /*  Small Devices  - smart phones */
+	.panel-1, 
+	.panel-2, 
+	.panel-3 {
+		background-size: cover;
+	}
 
 }
 
