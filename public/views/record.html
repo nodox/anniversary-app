@@ -1,10 +1,33 @@
-<div class="" ng-controller="RecordController" style="background: yellow;">
+<div class="bg-record" ng-controller="RecordController" >
   <div class="container">
     <div class="row">
-        <h1>{{posts}}</h1>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="col s12">
+      	  <div class="section">
+				    <h3 class="">A Journal for Couples</h3>
+				  </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="col s10">
+        	<form name="entryForm" ng-submit="addNewEntry()">
+        		<h5>Enter a new entry</h5>
+        		<div>
+	        		<label>Entry Title</label>
+	        		<input ng-model="newEntry.title">
+
+	        		<label>Body of Entry</label>
+	        		<textarea ng-model="newEntry.body"></textarea>
+	        	</div>
+	        	<button type="submit" class="btn waves-effect waves-light">Post Entry</button>
+        	</form>
+        </div>
+        <div class="col s10">
+        	 {{ posts }}
+        </div>
+
+
+
     </div>
   </div>
 </div> 

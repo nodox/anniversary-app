@@ -11,6 +11,12 @@ var app			   = express();
 var bodyParser	   = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose       = require('mongoose');
+
+// configure app to use bodyParser()
+// this will let us get the data from a POST
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 var apiEndpoints   = require('./app/routes/routes')(app);
 
 
@@ -66,14 +72,10 @@ var mailOptions = {
 */
 //mongoose.connect('mongodb://localhost/DATABASE_NAME'); 
 mongoose.connect('mongodb://sn:lp@novus.modulusmongo.net:27017/gyQ4unot'); 
-var Post = require('./app/models/post');
 
 
 
-// configure app to use bodyParser()
-// this will let us get the data from a POST
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+
 
 
 // set our port

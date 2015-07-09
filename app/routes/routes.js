@@ -5,7 +5,6 @@ var express = require('express');
 var router = express.Router();       // get an instance of the express Router
 
 
-
 module.exports = function(app) {
 
     // ROUTES FOR OUR API
@@ -114,7 +113,6 @@ module.exports = function(app) {
                 res.json({ message: 'Successfully deleted' });
             });
         });  
-
 
 
 };

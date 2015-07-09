@@ -18,7 +18,7 @@ angular.module('RecordModule').factory('PostService', ['$http',
 		};
 
 		PostObj.create = function(post) {
-			return $http.post('/api/posts').success(function(data) {
+			return $http.post('/api/posts', post).success(function(data) {
 					PostObj.posts.push(data);
 			});
 		};
