@@ -1,23 +1,34 @@
 angular.module('RecordModule', [])
   .controller('RecordController', ['$scope', '$http', 'PostService', function($scope, $http, PostService){
-		$scope.test = 'runner';
 
+  	// Contains all post from backend
 		$scope.posts = PostService.posts;
+
 		$scope.newEntry = {
 				title: '',
 				body: ''
 			};
 
+		$scope.currentPost = true;
 
+		// posts to the backend
 		$scope.addNewEntry = function() {
+			if ($scope.newEntry.title == '') {
+				return;
+			};
+			if ($scope.newEntry.body == '') {
+				return;
+			};
 			PostService.create({
 				title: $scope.newEntry.title,
 				body: $scope.newEntry.body
 			});			
 		};
 
+		// deletes post from the backend
 		$scope.deleteEntry = function(postId) {
 			PostService.delete(postId);
+
 		};
 
 		$scope.$on('$viewContentLoaded', function() {
