@@ -7,32 +7,36 @@
 				  </div>
         </div>
 
-        <div class="divider"></div>
-
         <div class="col s10">
         	<form name="entryForm" ng-submit="addNewEntry()">
-        		<h5>Enter a new entry</h5>
-        		<div>
-	        		<label>Entry Title</label>
-	        		<input ng-model="newEntry.title">
+                <div class="row">
+                    <div class="input-field col s12">
+                      <input id="entry_title" type="text" ng-model="newEntry.title" class="">
+                      <label for="entry_title">Title</label>
+                    </div>
 
-	        		<label>Body of Entry</label>
-	        		<textarea ng-model="newEntry.body"></textarea>
-	        	</div>
+                    <div class="input-field col s12">
+                      <textarea id="entry_body" ng-model="newEntry.body" class="materialize-textarea"></textarea>
+                      <label for="entry_body">Body</label>
+                    </div>
+                </div>
 	        	<button type="submit" class="btn waves-effect waves-light">Post Entry</button>
         	</form>
         </div>
        
         <div class="col s10">
-
-            <div>
-                <ul>
-                    <li ng-repeat="post in posts | orderBy:'-date' ">
-                        <h5>{{ post.title}}</h5>
-                        <p>{{ post.body }}</p>
+            <div class="journal">
+                <ul class="collection">
+                    <li ng-repeat="post in posts | orderBy:'-date'"
+                        class="collection-item">
+                        <div class="entry">
+                            <h5 class="">{{ post.title}}</h5>
+                            <p class="single-entry">{{ post.body }}</p>
+                        </div>
                     </li>
                 </ul>
             </div>
+
         </div>
 
 
