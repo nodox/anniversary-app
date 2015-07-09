@@ -1,5 +1,5 @@
 angular.module('RecordModule', [])
-  .controller('RecordController', ['$scope', '$http', function($scope, $http){
+  .controller('RecordController', ['$scope', '$http', 'PostService', function($scope, $http, PostService){
 		$scope.test = 'runner';
 
 			$scope.$on('$viewContentLoaded', function() {
