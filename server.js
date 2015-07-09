@@ -12,11 +12,11 @@ var bodyParser	   = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose       = require('mongoose');
 
-// configure app to use bodyParser()
-// this will let us get the data from a POST
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
 
+
+// enable routes ===============================
+app.use(bodyParser.urlencoded({ extended: true }));        // use bodyParser() to get the data from a POST
+app.use(bodyParser.json());
 var apiEndpoints   = require('./app/routes/routes')(app);
 
 
@@ -37,8 +37,6 @@ var transporter = nodemailer.createTransport({
     }
 });
 
-// NB! No need to recreate the transporter object. You can use
-// the same transporter object for all e-mails
 
 // setup e-mail data with unicode symbols
 var mailOptions = {
@@ -89,12 +87,10 @@ var port = process.env.PORT || 8080;
 
 app.use(express.static(__dirname + '/public'));   // set the static files location /public
 
-app.listen(port);      														// startup our app at http://localhost:8080         
+app.listen(port);      							  // startup our app at http://localhost:8080         
 
 // shoutout to the user                     
 console.log('Magic happens on port ' + port);
-
-
 
 
 // expose app           

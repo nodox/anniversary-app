@@ -8,9 +8,9 @@ a[data-activates="slide-out"] {
 	left: 10px;
 }
 
-/* ===============================
-
-================================== */
+.mdi-navigation-menu {
+	color: #000000;
+}
 
 
 .mdi-content-add {

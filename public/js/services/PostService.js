@@ -5,13 +5,20 @@ angular.module('RecordModule').factory('PostService', ['$http',
 			posts: []
 		};
 
+		/*==================================
+
+			Requests to the RESTful api endpoints
+
+		====================================*/
+
+
 		PostObj.getAll = function() {
 			return $http.get('/api/posts').success(function(data) {
 				angular.copy(data, PostObj.posts);
 			});
 		};
 
-		PostObj.get = function(postId) { // check resolveobject of a single post
+		PostObj.get = function(postId) { 																			// check resolve object of a single post config.js
 			return $http.get('/api/posts/' + postId).then(function(response){
 				return response.data;
 			});
