@@ -4,40 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Luisanny App</title>
+
     <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="libs/materialize/bin/materialize.css">
     <link rel="stylesheet" type="text/css" href="libs/fullpage/jquery.fullPage.css" >
     <link rel="stylesheet" type="text/css" href="css/universal.css">
-
-    <script src="libs/angular/angular.js"></script>
-    <script src="libs/angular-route/angular-route.js"></script>
-    
-    
 
 
 </head>
 <body ng-app="anniversaryApp">
 
 
-    <!-- <nav ng-include="'views/nav.html'"></nav> -->
+    <nav ng-include="'views/nav.html'"></nav>
 
 
-    <main ng-view></main>
+    <main ng-view>
 
+    </main>
+
+
+    <!-- bower:js -->
+    <script src="libs/jquery/dist/jquery.js"></script>
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/angular-route/angular-route.js"></script>
+    <script src="libs/materialize/bin/materialize.js"></script>
+    <script src="libs/fullpage/jquery.fullPage.js"></script>
+    <script src="libs/fullpage/vendors/jquery.easings.min.js"></script>
+    <script src="libs/fullpage/vendors/jquery.slimscroll.min.js"></script>
+    <!-- endbower -->
 
 
     <script src="http://localhost:35729/livereload.js"></script>
 
-    <script src="libs/jquery/dist/jquery.min.js"></script>
-    <script src="libs/jquery-ui/jquery-ui.min.js"></script>
-    <script src="libs/fullpage/jquery.fullPage.min.js"></script>
-
    
     
     <!-- Load Controllers -->
-    <script src="js/controllers/RememberController.js"></script> 
+    <script src="js/controllers/RememberController.js"></script>
 
     <!-- <script src="js/controllers/RecordController.js"></script>
     <script src="js/controllers/ReconnectController.js"></script> -->
+
     <!-- Load Services -->
 
     <!-- Load Directives -->

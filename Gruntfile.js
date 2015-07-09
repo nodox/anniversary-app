@@ -19,6 +19,11 @@ module.exports = function(grunt) {
         script: 'server.js',
       }
     },
+    wiredep: {
+      task: {
+        src: ['public/index.html']
+      }
+    },
 
     watch: {
       options: {
