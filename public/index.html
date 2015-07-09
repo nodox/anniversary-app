@@ -17,7 +17,7 @@
 <body ng-app="anniversaryApp">
 
 
-    <nav ng-include="'views/nav.html'"></nav>
+    <nav ng-include="'views/nav.html'" ng-controller="NavController"></nav>
 
 
     <main ng-view>
@@ -41,6 +41,7 @@
    
     
     <!-- Load Controllers -->
+     <script src="js/controllers/NavController.js"></script>
     <script src="js/controllers/RememberController.js"></script>
     <script src="js/controllers/RecordController.js"></script>
     <script src="js/controllers/ReconnectController.js"></script>
