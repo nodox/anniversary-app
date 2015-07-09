@@ -22,8 +22,17 @@
 	        	<button type="submit" class="btn waves-effect waves-light">Post Entry</button>
         	</form>
         </div>
+       
         <div class="col s10">
-        	 {{ posts }}
+
+            <div>
+                <ul>
+                    <li ng-repeat="post in posts | orderBy:'-date' ">
+                        <h5>{{ post.title}}</h5>
+                        <p>{{ post.body }}</p>
+                    </li>
+                </ul>
+            </div>
         </div>
 
 

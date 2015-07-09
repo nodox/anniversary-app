@@ -3,18 +3,17 @@ angular.module('RecordModule', [])
 		$scope.test = 'runner';
 
 		$scope.posts = PostService.posts;
+		$scope.newEntry = {
+				title: '',
+				body: ''
+			};
+
 
 		$scope.addNewEntry = function() {
 			PostService.create({
 				title: $scope.newEntry.title,
 				body: $scope.newEntry.body
 			});			
-			$scope.newEntry = {
-				title: '',
-				body: ''
-			};
-
-
 		};
 
 		$scope.$on('$viewContentLoaded', function() {

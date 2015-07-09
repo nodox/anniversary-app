@@ -53,7 +53,7 @@ module.exports = function(app) {
                 if (err)
                     response.send(err);
 
-                response.json({ message: 'Post created!' });
+                response.json(post);
             });
         })
 
