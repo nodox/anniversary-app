@@ -73,9 +73,6 @@ mongoose.connect('mongodb://sn:lp@novus.modulusmongo.net:27017/gyQ4unot');
 
 
 
-
-
-
 // set our port
 var port = process.env.PORT || 8080; 
 
