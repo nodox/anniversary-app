@@ -25,19 +25,21 @@ a[data-activates="slide-out"] {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
-	background-size: 500px 100%;
 }
 
 .panel-1 {
 	background-image: url("../../assets/img/couples.jpg");
+	background-size: length;
 }
 
 .panel-2 {
 	background-image: url("../../assets/img/wedding_area.jpg");
+	background-size: 800px 100%;
 }
 
 .panel-3 {
 	background-image: url("../../assets/img/just_married.jpg");
+	background-size: length;
 }
 
 
