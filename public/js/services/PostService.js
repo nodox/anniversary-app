@@ -11,10 +11,24 @@ angular.module('RecordModule').factory('PostService', ['$http',
 			});
 		};
 
+		PostObj.get = function(postId) { // check resolveobject of a single post
+			return $http.get('/api/posts/' + postId).then(function(response){
+				return response.data;
+			});
+		};
+
 		PostObj.create = function(post) {
 			return $http.post('/api/posts').success(function(data) {
 					PostObj.posts.push(data);
 			});
+		};
+
+		PostObj.delete = function(postId){
+			/*return $http.delete('/api/posts/' + postId)*/
+		};
+
+		PostObj.update = function(postId){
+			/*return $http.put('/api/posts/' + postId)*/
 		};
 
 
