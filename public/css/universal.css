@@ -9,23 +9,30 @@ a[data-activates="slide-out"] {
 }
 
 .mdi-content-add {
-	font-size: 56px;
-	color: rgba(255, 255, 255, 0.5);
+	font-size: 76px;
+	font-weight: 800;
+	color: rgba(0,0,0, 0.6);
+}
+
+.panel-1, 
+.panel-2, 
+.panel-3 {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
 }
 
 .panel-1 {
-	background-color: #F44336;
-
+	background-image: url("../../assets/img/couples.jpg");
 }
 
 .panel-2 {
-	background-color: #673AB7;
-
+	background-image: url("../../assets/img/wedding_area.jpg");
 }
 
 .panel-3 {
-	background-color: #00BCD4;
-
+	background-image: url("../../assets/img/just_married.jpg");
 }
 
 

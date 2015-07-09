@@ -13,10 +13,11 @@ module.exports = function(app) {
 
     // ROUTES FOR OUR API
     // =============================================================================       
-
+    var Post = require('../models/post');
 
     // all of our routes will be prefixed with /api
     app.use('/api', router);
+
 
 
 
