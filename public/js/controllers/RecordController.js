@@ -13,16 +13,18 @@ angular.module('RecordModule', [])
 
 		// posts to the backend
 		$scope.addNewEntry = function() {
-			if ($scope.newEntry.title == '') {
+			if ($scope.newEntry.title === '') {
 				return;
 			};
-			if ($scope.newEntry.body == '') {
+			if ($scope.newEntry.body === '') {
 				return;
 			};
 			PostService.create({
 				title: $scope.newEntry.title,
 				body: $scope.newEntry.body
-			});			
+			});	
+			$scope.newEntry.title = '';
+			$scope.newEntry.body = '';		
 		};
 
 		// deletes post from the backend
