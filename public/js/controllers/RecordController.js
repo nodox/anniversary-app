@@ -26,6 +26,7 @@ angular.module('RecordModule', [])
 			$scope.newEntry.title = '';
 			$scope.newEntry.body = '';		
 		};
+		
 
 		// deletes post from the backend
 		$scope.deleteEntry = function(postId) {

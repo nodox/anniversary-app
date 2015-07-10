@@ -11,71 +11,53 @@ module.exports = function(app) {
     // =============================================================================       
     var Post = require('../models/post');
 
-    // all of our routes will be prefixed with /api
+    // all of our routes prefixed with /api
     app.use('/api', router);
-
-
-
 
     // middleware to use for all requests
     router.use(function(request, response, next) {
-        // do logging
-        
-        //console.log('Something is happening in server.js');
-        next(); // make sure we go to the next routes and don't stop here
+        next(); 
     });
 
 
-    // test route to make sure everything is working 
-    // (accessed at GET http://localhost:8080/api)
+    // TEST API ENDPOINT
     router.get('/', function(request, response) {
         response.json({ 
             message: 'hooray! welcome to our api!' 
         });   
     });
 
-    // more routes for our API will happen here
-
-
     // on routes that end in /posts
-    // ----------------------------------------------------
     router.route('/posts')
 
-        // create a post (accessed at POST http://localhost:8080/api/posts)
+        // create a post 
         .post(function(request, response) {
             
-            var post = new Post();                      // create a new instance of the Post model
+            var post = new Post();              // create a new instance of the Post model
             post.title = request.body.title;    // set the posts title (comes from the request)
             post.body  = request.body.body;
 
             // save the post and check for errors
             post.save(function(err) {
-                if (err)
-                    response.send(err);
-
+                if (err) response.send(err);
                 response.json(post);
             });
         })
 
-        // get all the posts (accessed at GET http://localhost:8080/api/posts)
+        // get all the posts
         .get(function(req, response) {
-
             Post.find(function(err, posts) {
-                if (err)
-                    response.send(err);
-
+                if (err) response.send(err);
                 response.json(posts);
             });
         });
 
 
 
-    // on routes that end in /posts/:post_id
-    // ----------------------------------------------------
-
+    // on routes that end /posts/:post_id
     router.route('/posts/:post_id')
 
-        // get the post with that id (accessed at GET http://localhost:8080/api/posts/:post_id)
+        // get the post with that id 
         .get(function(request, response) {
             Post.findById(request.params.post_id, function(err, post) {
                 if (err) response.send(err);
@@ -83,24 +65,22 @@ module.exports = function(app) {
             });
         })
 
-            // update the post with that id (accessed at PUT http://localhost:8080/api/posts/:post_id)
+        // update the post with that id 
         .put(function(request, response) {
 
-            // find the post we want
+            // find the post
             Post.findById(request.params.post_id, function(err, post) {
+                if (err) response.send(err);
 
+                // update post info
+                post.title = request.body.title;
+                post.body = request.body.body;
 
+                // save the post
+                post.save(function(err) {
                     if (err) response.send(err);
-
-                    // update post info
-                    post.title = request.body.title;
-                    post.body = request.body.body;
-
-                    // save the post
-                    post.save(function(err) {
-                        if (err) response.send(err);
-                        response.json({ message: "Post has been updated!" });
-                    });
+                    response.json({ message: "Post has been updated!" });
+                });
             });
         })
             
@@ -113,8 +93,6 @@ module.exports = function(app) {
                 res.json({ message: 'Successfully deleted' });
             });
         });  
-
-
 };
 
 
